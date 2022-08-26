@@ -22,26 +22,24 @@ header {
   /* position: fixed; 
   top: 0;  */
 }
-.errormessage{
-  
+.errormessage {
   width: 100%;
   height: 10vh;
   font-size: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
   color: var(--auc-color);
   letter-spacing: 1px;
   word-spacing: 3px;
-
 }
 
 header img {
   width: 25%;
   max-width: 200px;
 }
-.image{
+.image {
   size-adjust: 20%;
   display: flex;
   flex-direction: column;
@@ -175,32 +173,11 @@ header img {
   font-size: 16px;
 }
 
-#submit_butt {
-  font-size: 20px;
-  cursor: pointer;
-  color: black;
-  background-color: grey;
-  border-radius: 5%;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  letter-spacing: 1px;
-  font-weight: bolder;
-  transition: 0.2s;
-}
-
-#submit_butt:hover {
-  font-size: 22px;
-  letter-spacing: 2px;
-  box-shadow: 3px 3px black;
-}
-
 .button2 {
   font-size: 20px;
   cursor: pointer;
   color: white;
-  background-color:var(--auc-color);
+  background-color: var(--auc-color);
   border-radius: 5%;
   padding-left: 10px;
   padding-right: 10px;
@@ -212,13 +189,11 @@ header img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin:auto;
-  width:30%;
+  margin: auto;
+  width: 30%;
   text-align: center;
   margin-top: 20px;
-  font-family: 'Times New Roman', Times, serif;
-  
-  
+  font-family: "Times New Roman", Times, serif;
 }
 
 th,
