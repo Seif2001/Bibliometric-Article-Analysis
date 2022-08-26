@@ -1,0 +1,29 @@
+{%extends "layout.html"%} {%block content%}
+<header class="title">
+  <h1>Library Bibliometric Analysis</h1>
+</header>
+<body>
+    <div class="image">
+        <img
+        src="{{url_for('static', filename = 'css/error.png')}}"
+        alt="error"
+        
+      />
+    </div>
+    <div class="errormessage">
+      An error occured,please try again
+    </div>
+    <div >
+        <form method="post" action="">
+          <button
+            name="foo"
+            value="Return to homepage"
+            class="button2"
+          >
+            Return to homepage
+          </button>
+        </form>
+        </div>
+</body>
+
+{%endblock%}

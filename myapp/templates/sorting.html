@@ -1,0 +1,56 @@
+{%extends "layout.html"%} {%block content%}
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  tr:hover {
+    background-color: rgb(61, 78, 107);
+    color: aliceblue;
+    }
+
+    thead {
+  background-color: rgb(246, 176, 0);
+  color: rgb(61, 78, 107);
+}
+
+    
+  </style>
+
+    <title>Sorted Sources</title>
+  </head>
+  <header class="title">
+    <h1>Sorted Sources</h1>
+  </header>
+  <body>
+    <div class="bodyy">
+      <div class="table">
+        {% for table in tables %} {{titles[loop.index]}} {{ table|safe }} {%endfor
+          %}
+      </div>
+
+      
+    </div>
+    <div >
+      <form method="post" action="">
+        <button
+          name="foo"
+          value="View Some suggestions and recommendations"
+          class="button2"
+        >
+          View Some suggestions and recommendations
+        </button>
+      </form>
+      </div>
+  </body>
+  
+ 
+{%endblock%}

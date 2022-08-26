@@ -1,0 +1,34 @@
+{%extends "layout.html"%} {%block content%}
+<header class="title">
+  <h1>Your Article into Retrospect</h1>
+</header>
+<body>
+  <div class="plot" style="width: 90%; margin: auto">
+    <div id="plot"></div>
+  </div>
+  <div class="plot" style="width: 90%; margin: auto">
+    <div id="plot2"></div>
+  </div>
+  <div >
+    <form method="post" action="">
+      <button
+        name="foo"
+        value="Return to homepage"
+        class="button2"
+      >
+        Return to homepage
+      </button>
+    </form>
+    </div>
+</body>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+  var graph = {{graphjson | safe}};
+
+  Plotly.plot("plot", graph, {});
+
+  var bar = {{barjson | safe}};
+
+  Plotly.plot("plot2", bar, {});
+</script>
+{%endblock%}

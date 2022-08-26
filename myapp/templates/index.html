@@ -1,0 +1,40 @@
+{%extends "layout.html"%} {%block content%}
+<header class="title">
+  <h1>Library Bibliometric Analysis</h1>
+</header>
+<div class="body">
+  <div class="intro">
+    <p>
+      Welcome! This page allows you to run an analysis on scholarly articles. It
+      provides information about journal
+      <a
+        href="https://www.elsevier.com/connect/editors-update/citescore-a-new-metric-to-help-you-choose-the-right-journal"
+        target="_blank"
+        >citescores</a
+      >,
+      <a href="https://sparcopen.org/open-access/" target="_blank"
+        >Open Access</a
+      >, and
+      <a href="https://www.scimagojr.com/help.php" target="_blank"
+        >SJR Quartiles</a
+      >. Sources cited in the article(s) are automatically included in the
+      analysis for the sake of comparison.
+    </p>
+  </div>
+
+  <div class="Input_form">
+    <p>
+      Please enter a DOI in the box below. (<a
+        href="https://apastyle.apa.org/learn/faqs/what-is-doi"
+        >What is a DOI?</a
+      >)
+    </p>
+    <div class="input_area">
+      <form method="post" action="#">
+        <input type="text" name="doi" placeholder="type here" />
+        <input type="submit" value="submit" />
+      </form>
+    </div>
+  </div>
+</div>
+{%endblock%}

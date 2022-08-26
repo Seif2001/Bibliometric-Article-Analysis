@@ -1,0 +1,57 @@
+{%extends "layout.html"%} {%block content%}
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  tr:hover {
+    background-color: rgb(61, 78, 107);
+    color: aliceblue;
+  }
+
+  thead {
+    background-color: rgb(246, 176, 0);
+    color: rgb(61, 78, 107);
+  }
+</style>
+
+<header class="title">
+  <h1>About your sources</h1>
+</header>
+<div class="body">
+  <div class="introo">
+    Your article cited {{full_list}} sources. Data was found for
+    {{accurateList}} sources.
+</div>
+<body>
+  
+    <div class="table">
+      {% for table in tables %} {{titles[loop.index]}} {{ table|safe }} {%endfor
+      %}
+    </div>
+  </div>
+  <div >
+    <form method="post" action="">
+      <button
+        name="foo"
+        value="View Sorted Resources"
+        class="button2"
+      >
+        View Sorted Resources
+      </button>
+    </form>
+    </div>
+</body>
+{%endblock%}
+

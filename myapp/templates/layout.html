@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/CSS"
+      href="{{url_for('static', filename = 'css/style.css')}}"
+    />
+    <script src="static/css/script.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bibliometric Analysis For Institutional Repositories</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="{{url_for('static', filename = 'css/AUC logo2.png')}}"
+        alt="auc logo"
+      />
+    </header>
+
+    {%block content%} {%endblock%}
+  </body>
+</html>

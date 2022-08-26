@@ -1,0 +1,61 @@
+{%extends "layout.html"%} {%block content%}
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  tr:hover {
+    background-color: rgb(61, 78, 107);
+    color: aliceblue;
+    }
+
+    thead {
+  background-color: rgb(246, 176, 0);
+  color: rgb(61, 78, 107);
+}
+
+    
+  </style>
+
+    <title>Some suggestions based on the data</title>
+  </head>
+  <header class="title">
+    <h1>Some suggestions based on the data</h1>
+  </header>
+  <body>
+      <div class="table">
+        <h3 class="intro1"> The top two journals based on cite score</h3>
+        {% for table3 in tables3 %} {{titles3[loop.index]}} {{ table3|safe }} {%endfor
+          %}
+      </div>
+      <div class="table">
+        <h3 class="intro1"> {{mytitle}}</h3>
+        {% for table2 in tables2 %} {{titles2[loop.index]}} {{ table2|safe }} {%endfor
+          %}
+      </div>
+
+      
+    </div>
+    <div >
+      <form method="post" action="">
+        <button
+          name="foo"
+          value="View Some plots for data "
+          class="button2"
+        >
+          View Some Plots for your data
+        </button>
+      </form>
+      </div>
+  </body>
+  
+ 
+{%endblock%}
