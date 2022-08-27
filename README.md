@@ -15,9 +15,11 @@ In addition, the tool also scraped the web to find all the articles that were ci
 3. Go to the directory to where the code was saved
 4. Right click and click on "Run in Terminal" option.
 ![image](https://user-images.githubusercontent.com/78408934/187026405-b51781b7-e9ea-4fd3-b5cf-6f99db5ab736.png)
-5. Run "pip install -r Requirements.txt" in the terminal
+5. Type ```console
+"pip install -r Requirements.txt"
+``` in the terminal
 6. Copy and paste the contents of "Run.txt" into the terminal
-7. Control + click on the outputed link which will take you to the website
+7. Ctrl + click on the outputed link which will take you to the website
 ![image](https://user-images.githubusercontent.com/78408934/187026498-236c9638-511d-4b8e-9f22-eb15c60b5c07.png)
 
 
