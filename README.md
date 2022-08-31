@@ -13,7 +13,7 @@ In addition, the tool also scraped the web to find all the articles that were ci
 1. Install python from: https://www.python.org/downloads/
 2. Download the code as a zip and then unzip it or use git clone command to download the code
 3. Go to the directory to where the code was saved
-4. Right click and click on "Run in Terminal" option.
+4. Right click and click on "Run in Terminal" option, if you do not find this option open command prompt and type cd followed by the directory in whcich the file was downloaded
 ![image](https://user-images.githubusercontent.com/78408934/187026405-b51781b7-e9ea-4fd3-b5cf-6f99db5ab736.png)
 5. Type ```pip install -r Requirements.txt``` in the terminal
 6. Copy and paste the contents of "Run.txt" into the terminal
