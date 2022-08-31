@@ -359,9 +359,17 @@ def resourceanalysis():
 def showAnalysis():
     try:
 
-        df['CiteScore'] = df['CiteScore'].replace('unknown', 0)
+        
         df['CiteScore'] = df['CiteScore'].replace('No', 0)
         df['CiteScore'] = df['CiteScore'].replace('Yes', 0)
+        for i in range(len(df)):
+            try:
+                df['CiteScore'][i] = float(df['CiteScore'][i])
+            except:
+                df['CiteScore'][i]=0
+                
+    
+        df['CiteScore'] = df['CiteScore'].replace('unknown', 0)
         df['CiteScore'] = df['CiteScore'].astype(np.float16)
 
         df.sort_values('CiteScore', ascending= False, inplace=True)
