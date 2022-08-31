@@ -81,17 +81,21 @@ def article():
             Article_journal='unknown'   
 
 
-        if soup.find('person_name') != None:
-            Author = soup.find('person_name')
+        if soup.find_all('person_name') != None:
+            Authors = soup.find_all('person_name')
         else:
-            Author='unknown'
+            Authors='unknown'
+
+        name=""
 
         #if Author.find('given_name') !=None and Author.find('surname') !=None:
+        for Author in Authors:
+            try:
+                name =name+ Author.find('given_name').text + ' ' + Author.find('surname').text+', '
+            except:
+                name='unknown'
 
-        try:
-            name = Author.find('given_name').text + ' ' + Author.find('surname').text
-        except:
-            name='unknown'
+        
 
         if soup.find('crm-item', {'name':'created'}):
             Year = datetime.strptime(soup.find('crm-item', {'name':'created'}).text[2:], '%y-%m-%dT%H:%M:%SZ')
@@ -206,7 +210,11 @@ def secWebScrape(link):
             except:
                 CiteScore[link[0]] ='unknown'
             try:
-                Quartile[link[0]] =table.find_all('td')[-1].text 
+                if(table.find_all('td')[-1].text.isnumeric()):
+                    Quartile[link[0]] =table.find_all('td')[-1].text
+                else:
+                    Quartile[link[0]] ='unknown'
+
             except:
                 Quartile[link[0]] ='unknown'
 
